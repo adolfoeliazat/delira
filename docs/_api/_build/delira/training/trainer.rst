@@ -26,3 +26,11 @@ use the trainer).
     :members:
     :undoc-members:
     :show-inheritance:
+
+:hidden:`TfNetworkTrainer`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: PyTorchNetworkTrainer
+    :members:
+    :undoc-members:
+    :show-inheritance:
