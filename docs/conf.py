@@ -21,7 +21,7 @@ os.environ["DELIRA_BACKEND"] = "torch,tf"
 from unittest.mock import MagicMock
 
 # source code directory, relative to this file, for sphinx-build
-sys.path.insert(0, os.path.abspath('../..'))
+sys.path.insert(0, os.path.abspath('../delira'))
 
 
 MOCK_CLASSES = {'Dataset': 'torch.utils.data', 'Module': 'torch.nn',
@@ -275,8 +275,6 @@ autodoc_mock_imports = [
     "PIL.Image",
     "tensorflow"
 ]
-
-import delira
 
 # We use the following to automatically run sphinx-apidoc, whenever we run make html.
 # The output is ignored (see exclude_patterns above) and just created for convenience,
