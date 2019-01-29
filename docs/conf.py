@@ -55,7 +55,7 @@ MOCK_MODULES = ['torch', 'torch.nn', 'torch.utils', 'torch.optim',
                 
                 'psutil', 'numpy', 'yaml', 'nltk', 'h5py', 'tqdm']
 
-import delira
+# import delira
 
 # -- Project information -----------------------------------------------------
 
