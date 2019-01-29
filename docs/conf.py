@@ -276,6 +276,8 @@ autodoc_mock_imports = [
     "tensorflow"
 ]
 
+import delira
+
 # We use the following to automatically run sphinx-apidoc, whenever we run make html.
 # The output is ignored (see exclude_patterns above) and just created for convenience,
 # so that we can compare _build with the existing rst files and see what we need to update.
