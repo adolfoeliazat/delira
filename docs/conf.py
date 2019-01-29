@@ -16,6 +16,8 @@ import os
 import sys
 import re
 
+os.environ["DELIRA_BACKEND"] = "torch,tf"
+
 from unittest.mock import MagicMock
 
 # source code directory, relative to this file, for sphinx-build
@@ -271,6 +273,7 @@ autodoc_mock_imports = [
     "PIL",
     "umap",
     "PIL.Image",
+    "tensorflow"
 ]
 
 # We use the following to automatically run sphinx-apidoc, whenever we run make html.
