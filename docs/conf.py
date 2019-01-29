@@ -21,7 +21,7 @@ os.environ["DELIRA_BACKEND"] = "torch,tf"
 from unittest.mock import MagicMock
 
 # source code directory, relative to this file, for sphinx-build
-sys.path.insert(0, os.path.abspath('../delira'))
+sys.path.insert(0, os.path.abspath('../..'))
 
 
 MOCK_CLASSES = {'Dataset': 'torch.utils.data', 'Module': 'torch.nn',
