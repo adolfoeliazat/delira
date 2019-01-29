@@ -5,7 +5,7 @@ build:
 
 python:
     version: 3.6
-    pip_install: true
+    pip_install: false
     use_system_site_packages: true
     extra_requirements: 
         - full
