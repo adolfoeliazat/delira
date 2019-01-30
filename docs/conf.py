@@ -49,6 +49,7 @@ MOCK_MODULES = [
     "visdom",
     "pyyaml",
     "trixi",
+    "trixi.logger",
     "trixi.util",
     "batchgenerators",
     "batchgenerators.dataloading",
