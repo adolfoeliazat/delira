@@ -45,6 +45,7 @@ MOCK_MODULES = [
     "trixi",
     "batchgenerators",
     "batchgenerators.dataloading",
+    "batchgenerators.dataloading.data_loader",
     "psutil",
     "nested_lookup",
     "colorlover",
