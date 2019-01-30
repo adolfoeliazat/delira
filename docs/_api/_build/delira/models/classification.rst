@@ -22,9 +22,9 @@ Classification
     :show-inheritance:
 
 :hidden:`ClassificationNetworkBaseTf`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. autoclass:: AbstractPyTorchNetwork
+.. autoclass:: ClassificationNetworkBaseTf
     :members:
     :undoc-members:
     :show-inheritance:

@@ -30,7 +30,7 @@ use the trainer).
 :hidden:`TfNetworkTrainer`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. autoclass:: PyTorchNetworkTrainer
+.. autoclass:: TfNetworkTrainer
     :members:
     :undoc-members:
     :show-inheritance:

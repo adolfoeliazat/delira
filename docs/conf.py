@@ -16,73 +16,11 @@ import os
 import sys
 import re
 
-os.environ["DELIRA_BACKEND"] = "torch,tf"
-
-from unittest.mock import MagicMock
+os.environ["DELIRA_BACKEND"] = "torch,tf,"
 
 # source code directory, relative to this file, for sphinx-build
-#sys.path.insert(0, os.path.abspath('../.'))
+sys.path.insert(0, os.path.abspath('../.'))
 
-
-MOCK_MODULES = [
-    "numpy",
-    "torchvision",
-    "torchvision.datasets",
-    "torch",
-    "torch.nn",
-    "torch.nn.functional",
-    "skimage",
-    "skimage.io",
-    "skimage.transform",
-    "sklearn",
-    "sklearn.model_selection",
-    "jupyter",
-    "flake8"
-    "pytest-cov",
-    "autopep8",
-    "ipython",
-    "joblib",
-    "pillow",
-    "SimpleITK",
-    "pylint",
-    "tqdm",
-    "visdom",
-    "pyyaml",
-    "trixi",
-    "trixi.logger",
-    "trixi.util",
-    "batchgenerators",
-    "batchgenerators.dataloading",
-    "batchgenerators.dataloading.data_loader",
-    "batchgenerators.transforms",
-    "psutil",
-    "nested_lookup",
-    "colorlover",
-    "flask",
-    "graphviz",
-    "matplotlib",
-    "seaborn",
-    "scipy",
-    "scipy.ndimage",
-    "telegram",
-    "portalocker",
-    "plotly",
-    "PIL",
-    "umap",
-    "PIL.Image",
-    "tensorflow"
-]
-
-
-from unittest.mock import MagicMock
-
-class Mock(MagicMock):
-    @classmethod
-    def __getattr__(cls, name):
-        return MagicMock()
-sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
-
-import delira
 
 # -- Project information -----------------------------------------------------
 
@@ -90,10 +28,23 @@ project = 'delira'
 copyright = '2019, Justus Schock, Oliver Rippel, Christoph Haarburger'
 author = 'Justus Schock, Oliver Rippel, Christoph Haarburger'
 
+
+def read_file(file):
+    with open(file) as f:
+        content = f.read()
+    return content
+
+def find_version(file):
+    content = read_file(file)
+    version_match = re.search(r"^__version__ = ['\"]([^'\"]*)['\"]", content,
+                              re.M)
+    if version_match:
+        return version_match.group(1)
+
 # The short X.Y version
-version = delira.__version__
+version = find_version("../delira/__init__.py") #delira.__version__
 # The full version, including alpha/beta/rc tags
-release = delira.__version__
+release = version #delira.__version__
 
 
 # -- General configuration ---------------------------------------------------
@@ -251,7 +202,7 @@ texinfo_documents = [
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {'https://docs.python.org/': None,
                       'trixi': ('https://trixi.readthedocs.io/en/latest/', None),
-                      'torch': ('https://pytorch.org/docs/stable/index.html', None)}
+                      'torch': ('https://pytorch.org/docs/stable/', None)}
 
 # -- Options for todo extension ----------------------------------------------
 
@@ -267,3 +218,97 @@ autodoc_default_flags = ['members',
                          'show-inheritance']
 
 autodoc_inherit_docstrings = True
+
+autodoc_mock_imports = [
+        "numpy",
+        "torchvision",
+        "torch",
+        "skimage",
+        "sklearn",
+        "jupyter",
+        "flake8"
+        "pytest-cov",
+        "autopep8",
+        "ipython",
+        "joblib",
+        "pillow",
+        "SimpleITK",
+        "pylint",
+        "tqdm",
+        "visdom",
+        "pyyaml",
+        "trixi",
+        "batchgenerators",
+        "psutil",
+        "nested_lookup",
+        "colorlover",
+        "flask",
+        "graphviz",
+        "matplotlib",
+        "seaborn",
+        "scipy",
+        "scipy.ndimage",
+        "telegram",
+        "portalocker",
+        "plotly",
+        "PIL",
+        "umap",
+        "tensorflow"
+    ]
+
+# autodoc_mock_imports = [
+#         "torch.optim",
+#         "torch.optim.lr_scheduler",
+#         "yaml",
+#         "numpy",
+#         "torchvision",
+#         "torchvision.datasets",
+#         "torch",
+#         "torch.nn",
+#         "torch.nn.functional",
+#         "skimage",
+#         "skimage.io",
+#         "skimage.transform",
+#         "sklearn",
+#         "sklearn.model_selection",
+#         "jupyter",
+#         "flake8"
+#         "pytest-cov",
+#         "autopep8",
+#         "ipython",
+#         "joblib",
+#         "pillow",
+#         "SimpleITK",
+#         "pylint",
+#         "tqdm",
+#         "visdom",
+#         "pyyaml",
+#         "trixi",
+#         "trixi.experiment",
+#         "trixi.logger",
+#         "trixi.util",
+#         "batchgenerators",
+#         "batchgenerators.dataloading",
+#         "batchgenerators.dataloading.data_loader",
+#         "batchgenerators.transforms",
+#         "psutil",
+#         "nested_lookup",
+#         "colorlover",
+#         "flask",
+#         "graphviz",
+#         "matplotlib",
+#         "seaborn",
+#         "scipy",
+#         "scipy.ndimage",
+#         "telegram",
+#         "portalocker",
+#         "plotly",
+#         "PIL",
+#         "umap",
+#         "PIL.Image",
+#         "tensorflow",
+#         "tqdm.auto",
+#         "trixi.logger.tensorboard",
+#         "trixi.logger.tensorboard.tensorboardxlogger",
+#         "sklearn.metrics",
+# ]
