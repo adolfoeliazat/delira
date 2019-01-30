@@ -32,6 +32,7 @@ MOCK_MODULES = [
     "torch.nn",
     "torch.nn.functional",
     "skimage",
+    "skimage.io",
     "skimage.transform",
     "sklearn",
     "sklearn.model_selection",
