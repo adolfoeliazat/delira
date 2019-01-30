@@ -31,6 +31,7 @@ MOCK_MODULES = [
     "skimage",
     "skimage.transform",
     "sklearn",
+    "sklearn.model_selection",
     "jupyter",
     "flake8"
     "pytest-cov",
