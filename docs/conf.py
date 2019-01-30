@@ -44,6 +44,7 @@ MOCK_MODULES = [
     "pyyaml",
     "trixi",
     "batchgenerators",
+    "batchgenerators.dataloading",
     "psutil",
     "nested_lookup",
     "colorlover",
