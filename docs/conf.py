@@ -29,6 +29,7 @@ MOCK_MODULES = [
     "torchvision",
     "torch",
     "skimage",
+    "skimage.transform",
     "sklearn",
     "jupyter",
     "flake8"
