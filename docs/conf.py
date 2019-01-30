@@ -52,6 +52,7 @@ MOCK_MODULES = [
     "batchgenerators",
     "batchgenerators.dataloading",
     "batchgenerators.dataloading.data_loader",
+    "batchgenerators.transforms",
     "psutil",
     "nested_lookup",
     "colorlover",
