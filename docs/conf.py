@@ -27,6 +27,7 @@ from unittest.mock import MagicMock
 MOCK_MODULES = [
     "numpy",
     "torchvision",
+    "torchvision.datasets",
     "torch",
     "torch.nn",
     "torch.nn.functional",
