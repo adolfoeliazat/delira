@@ -6,15 +6,15 @@ formats:
     - pdf
     - htmlzip
 
-# python:
-#     version: 3.7
-#     install:
-#         - requirements: docs/requirements.txt
-#         - method: setuptools
-#     system_packages: false
+python:
+    version: 3.7
+    install:
+        - requirements: docs/requirements.txt
+        - method: setuptools
+    system_packages: false
 
 build:
   image: latest
  
-conda:
-    environment: docs/conda.yml
+# conda:
+#     environment: docs/conda.yml
