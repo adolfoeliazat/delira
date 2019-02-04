@@ -253,7 +253,8 @@ autodoc_mock_imports = [
         "plotly",
         "PIL",
         "umap",
-        "tensorflow"
+        "tensorflow",
+        "yaml"
     ]
 
 # autodoc_mock_imports = [
