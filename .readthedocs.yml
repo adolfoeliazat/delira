@@ -1,11 +1,10 @@
 # .readthedocs.yml
-
 version: 2
 
-formats: all
-
-build:
-    image: latest
+formats: 
+    - epub
+    - pdf
+    - htmlzip
 
 # python:
 #     version: 3.7
