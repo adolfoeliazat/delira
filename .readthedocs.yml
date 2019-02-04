@@ -7,7 +7,7 @@ formats:
     - htmlzip
 
 python:
-    version: 3.6
+    version: 3.7
     install:
         - requirements: docs/requirements.txt
         - method: setuptools
@@ -16,5 +16,5 @@ python:
 build:
   image: latest
  
-# conda:
-#     environment: docs/conda.yml
+conda:
+    environment: docs/conda.yml
